@@ -1,0 +1,12 @@
+# OS and IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local WordPress and test environment
+wp-config.php
+vendor/
+node_modules/
+coverage/
+*.log
