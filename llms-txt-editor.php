@@ -2,6 +2,7 @@
 /**
  * Plugin Name: LLMS.txt Editor
  * Plugin URI: https://ворд-пресс.рф
+ * Update URI: https://github.com/noice-man/wp-llms-txt-editor/
  * Description: Создаёт и редактирует llms.txt в админке WordPress. Проверяет кодировку и предлагает безопасную альтернативу настройке сервера.
  * Version: 1.2.0
  * Author: Valery Molodtsov
@@ -505,4 +506,16 @@ function vm_llms_render_editor() {
         </div>
     </div>
     <?php
+}
+
+/** GitHub release asset updater (library bundled in distribution ZIP). */
+$puc_file = plugin_dir_path( __FILE__ ) . 'plugin-update-checker/plugin-update-checker.php';
+if ( is_readable( $puc_file ) ) {
+    require_once $puc_file;
+    $puc_checker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+        'https://github.com/noice-man/wp-llms-txt-editor/',
+        __FILE__,
+        'llms-txt-editor'
+    );
+    $puc_checker->getVcsApi()->enableReleaseAssets( '/^llms-txt-editor-v[0-9]+\.[0-9]+\.[0-9]+\.zip$/i' );
 }
