@@ -2,8 +2,9 @@
 /**
  * Plugin Name: LLMS.txt Editor
  * Plugin URI: https://ворд-пресс.рф
+ * Update URI: https://xn----ctbgf6biedka.xn--p1ai/plugins/wp-llms-txt-editor/
  * Description: Создаёт и редактирует llms.txt в админке WordPress. Проверяет кодировку и предлагает безопасную альтернативу настройке сервера.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Valery Molodtsov
  * Author URI: https://ворд-пресс.рф
  * License: GPL-2.0-or-later
@@ -506,3 +507,11 @@ function vm_llms_render_editor() {
     </div>
     <?php
 }
+
+/** WPR Update Hub v1.1: opt-in install telemetry, no forced auto-updates. */
+require_once __DIR__ . '/includes/wpr-updates-client.php';
+WPR_Updates_Client_V2::register(__FILE__, array(
+    'slug' => 'wp-llms-txt-editor',
+    'server' => 'https://xn----ctbgf6biedka.xn--p1ai',
+    'telemetry' => true,
+));
