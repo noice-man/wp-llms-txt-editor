@@ -4,7 +4,7 @@
  * Plugin URI: https://ворд-пресс.рф
  * Update URI: https://xn----ctbgf6biedka.xn--p1ai/plugins/llms-txt-editor/
  * Description: Создаёт и редактирует llms.txt в админке WordPress. Проверяет кодировку и предлагает безопасную альтернативу настройке сервера.
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: Valery Molodtsov
  * Author URI: https://ворд-пресс.рф
  * License: GPL-2.0-or-later
