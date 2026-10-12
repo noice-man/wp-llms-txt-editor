@@ -3,7 +3,7 @@ Contributors: valerymolodtsov
 Tags: llms.txt, llms, ai, seo, markdown
 Requires at least: 5.6
 Requires PHP: 7.4
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,11 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Загрузите ZIP через Плагины → Добавить новый → Загрузить плагин. Откройте LLMS.txt в меню.
 
 == Changelog ==
+= 1.2.5 =
+* Обновлено описание добровольной статистики установок: теперь прямо указано, что она помогает разработчику на ворд-пресс.рф видеть используемые версии и поддерживать безопасное обновление со старых выпусков.
+* Уточнено, какие сведения отправляются, как часто, что происходит после отказа и почему отказ не влияет на получение обновлений.
+* Сохранён SDK 1.1.2: ручная проверка обновлений получает свежие метаданные, фоновые запросы используют кеш.
+
 = 1.2.4 =
 * WPR Updates Client SDK 1.1.2: refresh Hub metadata during explicit WordPress manual update checks while retaining background caching and ETag.
 
