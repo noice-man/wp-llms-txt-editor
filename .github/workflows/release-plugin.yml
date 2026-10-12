@@ -46,7 +46,7 @@ jobs:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
           set -euo pipefail
-          ROOT="/tmp/wp-plugin-package/wp-llms-txt-editor"
+          ROOT="/tmp/wp-plugin-package/llms-txt-editor"
           mkdir -p "$ROOT"
           for f in *.php readme.txt README.md CHANGELOG.md LICENSE; do
             if test -f "$f"; then cp "$f" "$ROOT/"; fi
@@ -63,7 +63,7 @@ jobs:
           find "$ROOT" -type l -print -quit | grep -q . && { echo 'Symlinks forbidden'; exit 1; } || true
           find "$ROOT" -name '*.php' -print0 | xargs -0 -n1 php -l
           cd /tmp/wp-plugin-package
-          zip -qr "$GITHUB_WORKSPACE/wp-llms-txt-editor-v$VERSION.zip" "wp-llms-txt-editor"
+          zip -qr "$GITHUB_WORKSPACE/llms-txt-editor-v$VERSION.zip" "llms-txt-editor"
           cd "$GITHUB_WORKSPACE"
-          unzip -tq "wp-llms-txt-editor-v$VERSION.zip"
-          gh release create "v$VERSION" "wp-llms-txt-editor-v$VERSION.zip" --target "$GITHUB_SHA" --title "wp-llms-txt-editor v$VERSION" --generate-notes
+          unzip -tq "llms-txt-editor-v$VERSION.zip"
+          gh release create "v$VERSION" "llms-txt-editor-v$VERSION.zip" --target "$GITHUB_SHA" --title "llms-txt-editor v$VERSION" --generate-notes
