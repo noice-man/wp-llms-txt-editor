@@ -3,7 +3,7 @@ Contributors: valerymolodtsov
 Tags: llms.txt, llms, ai, seo, markdown
 Requires at least: 5.6
 Requires PHP: 7.4
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Загрузите ZIP через Плагины → Добавить новый → Загрузить плагин. Откройте LLMS.txt в меню.
 
 == Changelog ==
+= 1.2.2 =
+* Fix stable WordPress slug and WPR Update Hub package directory.
+
 = 1.2.1 =
 * Migrate plugin updates to WPR Update Hub v1.1.
 * Add optional, consent-based anonymous installation statistics.
